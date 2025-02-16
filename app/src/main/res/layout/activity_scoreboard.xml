@@ -4,27 +4,60 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Scoreboard">
+    tools:context=".Scoreboard"
+    android:background="@drawable/background"
+    android:orientation="vertical">
 
-    <!-- Back Button (Previous) -->
-    <ImageButton
-        android:id="@+id/previous_button"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/ic_arrow_left"
-        android:contentDescription="Previous"
-        android:background="?android:attr/selectableItemBackground"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="16dp"/>
-
-    <!-- Scoreboard Section -->
+    <!-- Previous Button and Title -->
     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/previous_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/arrow_left_scoreboard"
+            android:contentDescription="Previous"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scoreboard"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="300dp"
+            android:background="@drawable/rounded_background">
+            <Button
+                android:id="@+id/share_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/darkgreen"
+                android:text="Share your score"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="100dp"
-        android:background="#388E3C"
         android:padding="20dp"
-        android:layout_below="@id/previous_button"
         android:clipToPadding="true">
 
         <TextView
@@ -32,34 +65,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Jhon Doe"
-            android:textSize="24sp"
-            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="42sp"
+            android:textColor="@color/darkgreen"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp" />
 
         <TextView
             android:id="@+id/user_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="6/10"
-            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textSize="24sp"
             android:textColor="#FFFFFF"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/user_name"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp" />
     </RelativeLayout>
 
-    <!-- Share Your Score Button -->
-    <Button
-        android:id="@+id/share_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Share your score"
-        android:textColor="#FFFFFF"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/user_score"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#388E3C"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"/>
+</RelativeLayout>
+
+
 </RelativeLayout>
