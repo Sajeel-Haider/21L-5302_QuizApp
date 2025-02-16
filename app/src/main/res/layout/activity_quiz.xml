@@ -8,6 +8,9 @@
     android:background="#F5F5F5">
 
     <!-- Previous Button with Arrow Icon -->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
     <ImageButton
         android:id="@+id/previous_button"
         android:layout_width="48dp"
@@ -17,6 +20,19 @@
         android:src="@drawable/ic_arrow_left"
         android:contentDescription="Previous"
         android:background="?android:attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/question_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/10"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp" />
+
+</RelativeLayout>
 
     <!-- Question Box -->
     <RelativeLayout

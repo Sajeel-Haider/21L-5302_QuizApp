@@ -20,7 +20,7 @@ public class QuizActivity extends AppCompatActivity {
     private TextView userNameTextView;
 
     // Views
-    private TextView questionText;
+    private TextView questionText, questionCount;
     private RadioGroup radioGroup;
     private Button nextButton;
     private ImageButton previousButton;
@@ -84,17 +84,15 @@ public class QuizActivity extends AppCompatActivity {
         init();
     }
     private void init(){
+        questionCount = findViewById(R.id.question_count);
         questionText = findViewById(R.id.question_text);
         radioGroup = findViewById(R.id.radio_group);
         previousButton = findViewById(R.id.previous_button);
         nextButton = findViewById(R.id.next_button);
         // Get the user's name from the Intent Extra
         String userName = getIntent().getStringExtra("USER_NAME");
-//        userNameTextView.setText("Welcome, " + userName);
-
         displayQuestion(currentQuestionIndex);
 
-        // Handle Next Button click
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,6 +105,7 @@ public class QuizActivity extends AppCompatActivity {
                     currentQuestionIndex++;
                     if (currentQuestionIndex < questions.length) {
                         displayQuestion(currentQuestionIndex);
+                        questionCount.setText((currentQuestionIndex + 1) + "/10");  // Update the question count
                     } else {
                         finishQuiz(userName);
                     }
@@ -114,16 +113,17 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
-        // Handle Previous Button click
         previousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (currentQuestionIndex > 0) {
                     currentQuestionIndex--;
                     displayQuestion(currentQuestionIndex);
+                    questionCount.setText((currentQuestionIndex + 1) + "/10");  // Update the question count
                 }
             }
         });
+
     }
 
    // Method to display a question and its options
