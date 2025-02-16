@@ -61,25 +61,29 @@
             android:text="1986"
             android:textSize="16sp"
             android:textColor="@color/black"
-            android:background="@drawable/circular_shape"
-            android:drawableRight="@drawable/ic_tick"
             android:layout_marginBottom="10dp"
-            android:paddingEnd="16dp"
-            android:layout_alignParentRight="true" />
+            android:paddingLeft="16dp"
+            android:background="@drawable/circular_shape"
+            android:drawableLeft="@drawable/radio_button_unchecked"
+            android:drawablePadding="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <!-- Option 2 -->
         <RadioButton
             android:id="@+id/option2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1994"
+            android:text="1986"
             android:textSize="16sp"
-            android:background="@drawable/circular_shape"
             android:textColor="@color/black"
-            android:drawableRight="@drawable/ic_tick"
             android:layout_marginBottom="10dp"
-            android:paddingEnd="16dp"
-            android:layout_alignParentRight="true"
+            android:paddingLeft="16dp"
+            android:background="@drawable/circular_shape"
+            android:drawableLeft="@drawable/radio_button_unchecked"
+            android:drawablePadding="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             />
 
         <!-- Option 3 -->
@@ -87,28 +91,32 @@
             android:id="@+id/option3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2002"
+            android:text="1986"
             android:textSize="16sp"
             android:textColor="@color/black"
-            android:background="@drawable/circular_shape"
-            android:drawableRight="@drawable/ic_tick"
             android:layout_marginBottom="10dp"
-            android:paddingEnd="16dp"
-            android:layout_alignParentRight="true"/>
+            android:paddingLeft="16dp"
+            android:background="@drawable/circular_shape"
+            android:drawableLeft="@drawable/radio_button_unchecked"
+            android:drawablePadding="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <!-- Option 4 -->
         <RadioButton
             android:id="@+id/option4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2010"
+            android:text="1986"
             android:textSize="16sp"
             android:textColor="@color/black"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="16dp"
             android:background="@drawable/circular_shape"
-            android:drawableRight="@drawable/ic_tick"
-            android:layout_marginBottom="20dp"
-            android:paddingEnd="16dp"
-            android:layout_alignParentRight="true"/>
+            android:drawableLeft="@drawable/radio_button_unchecked"
+            android:drawablePadding="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
     </RadioGroup>
 
     <!-- Next/Finish Button -->

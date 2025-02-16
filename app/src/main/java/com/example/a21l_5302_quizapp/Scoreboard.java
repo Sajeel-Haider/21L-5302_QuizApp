@@ -58,7 +58,7 @@ public class Scoreboard extends AppCompatActivity {
         shareButton.setOnClickListener(v -> shareScore());
     }
     private void shareScore() {
-        String shareText = "I scored " + score + "/10 in the quiz!";
+        String shareText = "I scored " + score + "/10 in the quiz on QuizKhelo!";
 
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
